@@ -2,7 +2,7 @@
 pythonとLine notify apiを用いて、東京大学教養学部の教務課のお知らせを10分に1回定点観測するツールです。
 ## 仕様
 ### 各ファイルの紹介
-#### main.py 東京大学教養学部の教務課ホームページ https://www.c.u-tokyo.ac.jp/zenki/index.htmlの「お知らせ」欄の変化を感知し、Line notify経由で伝達します。
+#### main.py 東京大学教養学部の教務課ホームページ https://www.c.u-tokyo.ac.jp/zenki/index.html の「お知らせ」欄の変化を感知し、Line notify経由で伝達します。
 #### sub.py main.pyの機能を、timeやscheduleモジュールを用いて、継続的に実行するための装置です。
 #### old_elem.xlsx 本ツールのデータベース部分です。このデータを鋳型として main.pyによって取得されたデータと比較し、変化を読み取ります。
 
