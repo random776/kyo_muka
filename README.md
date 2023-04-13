@@ -5,7 +5,8 @@ pythonとLine notify apiを用いて、東京大学教養学部の教務課の�
 - main.py：東京大学教養学部の教務課ホームページ https://www.c.u-tokyo.ac.jp/zenki/index.html の「お知らせ」欄の変化を感知し、Line notify経由で伝達します。
 - sub.py：main.pyの機能を、timeやscheduleモジュールを用いて、継続的に実行するための装置です。
 - old_elem.xlsx：本ツールのデータベース部分です。このデータを鋳型としてmain.pyによって取得されたデータと比較し、変化を読み取ります。
-### 使用方法（pythonの実行環境の設定などはご自分で行なってください。）
+### 使用方法
+注) pythonの実行環境の設定はご自分で行ってください。
 1. Line notify apiのホームページ https://notify-bot.line.me/doc/ja/を開き、Line notify api のアクセストークンを発行します。発行方法は https://qiita.com/iitenkida7/items/576a8226ba6584864d95 などを参照するとわかりやすいと思います。トークンを発行したら、指定したグループに「Line notify」を招待します。
 2. main.py に```'Authorization': 'Bearer ラインnotify api のトークン'```と書いてある場所があります。発行したトークンをコピーして、`ラインnotify api のトークン`の部分に貼り付けてください。
 3. ご自分の実行環境で sub.py を実行してください。ホームページ更新時に次のような表示が出ます（ホームページが更新されていなければ、Line側に通知は来ません）。
